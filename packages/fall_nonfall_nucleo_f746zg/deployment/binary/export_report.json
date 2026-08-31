@@ -1,0 +1,224 @@
+{
+  "adapter": {
+    "is_binary_adapter": true,
+    "mathematics": "non_fall_logit=logsumexp(four_class_logits[:, :3]); fall_logit=four_class_logits[:, 3]",
+    "weights_unchanged": true
+  },
+  "checkpoint_contract": {
+    "clip_length_frames": 60,
+    "feature_order": [
+      "x",
+      "y",
+      "z",
+      "dop_idx",
+      "range_m",
+      "azimuth_deg",
+      "elevation_deg"
+    ],
+    "model_class": "CNNTemporal",
+    "n_features": 7,
+    "original_class_order": [
+      "walking",
+      "standing",
+      "sitting",
+      "fall"
+    ],
+    "outer_fold": 4,
+    "strict_state_dict_load": true,
+    "validated_before_export": true
+  },
+  "compiler": {
+    "available_binaries_in_path": {
+      "stedgeai": null,
+      "stedgeai-cli": null,
+      "stm32ai": null
+    },
+    "board_flashed": false,
+    "errors": "No stedgeai, stedgeai-cli, or stm32ai executable was found in PATH; compiler analysis was not run.",
+    "exact_command": null,
+    "firmware_modified": false,
+    "flash_bytes": null,
+    "latency_ms": null,
+    "model": "fold4_binary_nonfall_fall",
+    "onnx_path": "cnn_temporal_fold4_nonfall_fall.onnx",
+    "output": "",
+    "ram_bytes": null,
+    "status": "not_available",
+    "supported_operators": null,
+    "tool_version": null
+  },
+  "environment": {
+    "onnx": "1.22.0",
+    "onnxruntime": "1.28.0",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.2",
+    "torch": "2.13.0"
+  },
+  "evaluation_evidence": {
+    "collapsed_binary_metrics": {
+      "binary_accuracy": 0.9754098360655737,
+      "binary_class_order": [
+        "non_fall",
+        "fall"
+      ],
+      "binary_confusion_matrix": [
+        [
+          109,
+          3
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "fall_f1": 0.8695652173913044,
+      "fall_precision": 0.7692307692307693,
+      "fall_recall": 1.0,
+      "four_class_confusion_matrix": [
+        [
+          32,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          34,
+          7,
+          1
+        ],
+        [
+          4,
+          4,
+          26,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          10
+        ]
+      ],
+      "original_class_order": [
+        "walking",
+        "standing",
+        "sitting",
+        "fall"
+      ],
+      "predicted_support": {
+        "fall": 13,
+        "non_fall": 109
+      },
+      "source": "Fold 4 saved four-class test confusion matrix",
+      "support": {
+        "fall": 10,
+        "non_fall": 112
+      }
+    },
+    "confusion_matrix": [
+      [
+        32,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        34,
+        7,
+        1
+      ],
+      [
+        4,
+        4,
+        26,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        10
+      ]
+    ],
+    "fold": 4,
+      "source": "../../training/fold4/metrics.json",
+    "test_metrics": {
+      "accuracy": 0.8360655737704918,
+      "fall_f1": 0.8695652173913043,
+      "fall_precision": 0.7692307692307693,
+      "fall_recall": 1.0,
+      "macro_f1": 0.8410257573352081
+    }
+  },
+  "model_description": "binary adapter derived from a four-class checkpoint; not a separately retrained binary model",
+  "normalization": {
+    "artifact_type": "checkpoint_bound_normalization",
+    "dtype": "float32",
+    "feature_order": [
+      "x",
+      "y",
+      "z",
+      "dop_idx",
+      "range_m",
+      "azimuth_deg",
+      "elevation_deg"
+    ],
+    "fit_scope": "outer-fold training sessions only",
+    "mean": [
+      0.6251651048660278,
+      2.3458504676818848,
+      -0.788230836391449,
+      0.038907285779714584,
+      2.6832118034362793,
+      14.188167572021484,
+      -19.048274993896484
+    ],
+    "onnx_expects": "already-normalized float32 [1,60,7] input",
+    "preprocessing_formula": "(raw_input - mean) / std",
+    "source_checkpoint_path": "../../training/fold4/cnn_temporal_event_centered.pt",
+    "source_checkpoint_sha256": "7789f13877133a6c00c52e58f2cde4c1b00713d895dfe2b6f278ce11aba5e8e8",
+    "std": [
+      0.7486507296562195,
+      0.9851225018501282,
+      0.34003353118896484,
+      2.0538766384124756,
+      0.983132004737854,
+      17.69748306274414,
+      9.395633697509766
+    ]
+  },
+  "onnx_path": "cnn_temporal_fold4_nonfall_fall.onnx",
+  "onnx_sha256": "10f8ed0d368aa95373be470a3ac17f7010569bb886689d977cb6ddcdc035b438",
+  "requested_onnx_contract": {
+    "class_order": [
+      "non_fall",
+      "fall"
+    ],
+    "dtype": "float32",
+    "dynamic_axes": false,
+    "evaluation_mode": true,
+    "input_name": "radar_input",
+    "input_shape": [
+      1,
+      60,
+      7
+    ],
+    "opset": 17,
+    "output_name": "binary_logits",
+    "output_shape": [
+      1,
+      2
+    ]
+  },
+  "source_checkpoint_path": "../../training/fold4/cnn_temporal_event_centered.pt",
+  "source_checkpoint_sha256": "7789f13877133a6c00c52e58f2cde4c1b00713d895dfe2b6f278ce11aba5e8e8",
+  "status": "pass",
+  "validation": {
+    "onnx_checker": "pass",
+    "onnxruntime_parity": "pass",
+    "report": "onnxruntime_parity_report.json"
+  },
+  "version": "fold4_binary_nonfall_fall"
+}

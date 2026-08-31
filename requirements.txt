@@ -1,0 +1,15 @@
+# Canonical dependencies for the radar host pipeline, passive capture tools,
+# GUI collection tool, and regression tests. Keep this as the only dependency
+# file for the radar repository.
+numpy
+pandas
+scipy
+matplotlib
+PyYAML
+scikit-learn
+torch
+onnx
+onnxruntime
+pyserial
+pytest
+numbers-parser

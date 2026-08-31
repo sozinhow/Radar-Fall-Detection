@@ -1,0 +1,2 @@
+timestamp,activity,frame,cluster_id,x,y,z,dop_idx,range_m,azimuth_deg,elevation_deg,session_id,recording_id,source_file
+2026-07-14T13:32:40.381574,sitting,0,1,0.3285411298274994,1.3062697649002075,-0.7742942571640015,0,1.5536446084474809,14.117692286507912,-29.89240542814444,sitting__sitting_20260714_133237_20hz,sitting__sitting_20260714_133237_20hz,sitting_20260714_133237_20hz.csv

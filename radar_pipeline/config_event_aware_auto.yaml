@@ -1,0 +1,52 @@
+radar:
+  mount_height_m: 1.8
+  tilt_deg: 12
+  elevation_beamwidth_deg: 60
+  azimuth_beamwidth_deg: 120
+  max_range_m: 5.0
+
+sampling:
+  expected_rate_hz: 20
+
+cleaning:
+  max_gap_frames_interp: 5
+  outlier_zscore_thresh: 3.0
+  velocity_max_mps: 3.0
+  smoothing_window: 5
+  idle_entropy_thresh: 0.1
+  idle_min_active_run: 5
+  idle_edge_padding: 2
+  idle_min_active_fraction: 0.15
+  idle_min_keep_fraction: 0.5
+  idle_trim_static_activities: false
+  normalization: zscore
+
+excluded_sessions:
+  standing_20260709_175909: contaminated recording; first 255 frames match a sitting-like state, recommended for re-recording
+
+windowing:
+  window_len_sec: 1.5
+  overlap_pct: 0.5
+  min_valid_ratio: 0.8
+  event_aware:
+    enabled: true
+    metadata_csv: data/metadata/auto_event_annotations.csv
+    fall_overlap_threshold: 0.50
+    exclude_post_event: true
+    exclude_transition: true
+
+split:
+  train: 0.7
+  val: 0.15
+  test: 0.15
+  random_seed: 42
+
+auto_event_annotation:
+  exclude_ambiguous_fall_windows: false
+  near_max_m: 2.0
+  middle_max_m: 3.2
+  min_event_duration_s: 0.8
+  max_event_duration_s: 2.2
+  peak_z_threshold: 2.5
+  low_motion_z: 0.8
+  high_drop_threshold: 0.40

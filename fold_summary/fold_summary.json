@@ -1,0 +1,38 @@
+[
+  {
+    "outer_fold": 1,
+    "best_epoch": 20,
+    "validation_accuracy": 0.8360655737704918,
+    "validation_macro_f1": 0.802420814048721,
+    "test_accuracy": 0.8264462809917356,
+    "test_macro_f1": 0.8215648548981882,
+    "checkpoint": "outputs\\experiments\\cnn_temporal_sgkf4_stm32\\fold_1\\cnn_temporal_event_centered.pt"
+  },
+  {
+    "outer_fold": 2,
+    "best_epoch": 31,
+    "validation_accuracy": 0.8360655737704918,
+    "validation_macro_f1": 0.8273177749360614,
+    "test_accuracy": 0.7603305785123967,
+    "test_macro_f1": 0.741342742278738,
+    "checkpoint": "outputs\\experiments\\cnn_temporal_sgkf4_stm32\\fold_2\\cnn_temporal_event_centered.pt"
+  },
+  {
+    "outer_fold": 3,
+    "best_epoch": 32,
+    "validation_accuracy": 0.9016393442622951,
+    "validation_macro_f1": 0.9199006699006699,
+    "test_accuracy": 0.8677685950413223,
+    "test_macro_f1": 0.8638530615075237,
+    "checkpoint": "outputs\\experiments\\cnn_temporal_sgkf4_stm32\\fold_3\\cnn_temporal_event_centered.pt"
+  },
+  {
+    "outer_fold": 4,
+    "best_epoch": 33,
+    "validation_accuracy": 0.819672131147541,
+    "validation_macro_f1": 0.8505841360934617,
+    "test_accuracy": 0.8360655737704918,
+    "test_macro_f1": 0.8410257573352081,
+    "checkpoint": "outputs\\experiments\\cnn_temporal_sgkf4_stm32\\fold_4\\cnn_temporal_event_centered.pt"
+  }
+]

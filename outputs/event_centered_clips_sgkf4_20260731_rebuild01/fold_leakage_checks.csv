@@ -1,0 +1,5 @@
+fold,train_sessions,validation_sessions,test_sessions,session_overlap_count,test_sessions_match_manifest_fold,cross_session_clips
+1,321,65,129,0,True,0
+2,322,64,129,0,True,0
+3,322,65,128,0,True,0
+4,321,65,129,0,True,0

@@ -1,0 +1,21 @@
+{
+  "task": "canonical_clip_four_class_argmax",
+  "class_order": [
+    "walking",
+    "standing",
+    "sitting",
+    "fall"
+  ],
+  "confusion_matrix_orientation": "rows=true_class, columns=predicted_class",
+  "accuracy": 0.7422680412371134,
+  "macro_precision": 0.7278846153846155,
+  "macro_recall": 0.7372004357298475,
+  "macro_f1": 0.7298726267724105,
+  "weighted_precision": 0.7378932064499074,
+  "weighted_recall": 0.7422680412371134,
+  "weighted_f1": 0.737198879135418,
+  "heldout_sessions": 97,
+  "checkpoint": "outputs/experiments/demo_candidate_60frame_80_20_20260721/model/cnn_bilstm_60frame_demo_candidate.pt",
+  "model_frozen_before_test_scoring": true,
+  "thresholds_applied": false
+}

@@ -1,0 +1,65 @@
+>>> stedgeai generate --model cnn_temporal_fold3_four_class.onnx --optimization balanced --target stm32f4 --name network --workspace workspace --output output
+ST Edge AI Core v4.0.1-20581 7ed50de05
+Creating c (debug) info json file network_c_info.json
+ Exec/report summary (generate)
+ ----------------------------------------------------------------------------------------------------------------------
+ model file         :   cnn_temporal_fold3_four_class.onnx   
+ type               :   onnx                                                                                           
+ c_name             :   network                                                                                        
+ compression        :   lossless                                                                                       
+ options            :   allocate-inputs, allocate-outputs, use-lite-runtime, use-st-ai                                 
+ optimization       :   balanced                                                                                       
+ target/series      :   stm32f4                                                                                        
+ workspace dir      :   workspace                            
+ output dir         :   output                               
+ model_fmt          :   float                                                                                          
+ model_name         :   cnn_temporal_fold3_four_class                                                                  
+ model_hash         :   0x676cf07de22799d6d3e5b3e32d388a58                                                             
+ params #           :   70,948 items (277.14 KiB)                                                                      
+ ----------------------------------------------------------------------------------------------------------------------
+ input 1/1          :   'radar_input', f32(1x60x7), 1.64 KBytes, activations                                           
+ output 1/1         :   'logits', f32(1x4), 16 Bytes, activations                                                      
+ macc               :   1,075,940                                                                                      
+ weights (ro)       :   283,792 B (277.14 KiB) (1 segment)                                                             
+ activations (rw)   :   11,776 B (11.50 KiB) (1 segment) *                                                             
+ ram (total)        :   11,776 B (11.50 KiB) = 11,776 + 0 + 0                                                          
+ ----------------------------------------------------------------------------------------------------------------------
+ (*) 'input'/'output' buffers are allocated in the activations buffer
+Computing AI RT data/code size (target=stm32f4)..
+ Requested memory size by section - "stm32f4" target
+ ------------------------------ ------- --------- ------ --------
+ module                            text    rodata   data      bss
+ ------------------------------ ------- --------- ------ --------
+ NetworkRuntime1201_CM4_GCC.a     3,676         0      0        0
+ network.o                        2,122        72    792       72
+ lib (toolchain)*                     0         0      0        0
+ ------------------------------ ------- --------- ------ --------
+ RT total**                       5,798        72    792       72
+ ------------------------------ ------- --------- ------ --------
+ weights                              0   283,792      0        0
+ activations                          0         0      0   11,776
+ states                               0         0      0        0
+ io                                   0         0      0        0
+ ------------------------------ ------- --------- ------ --------
+ TOTAL                            5,798   283,864    792   11,848
+ ------------------------------ ------- --------- ------ --------
+ *  toolchain objects (libm/libgcc*)
+ ** RT AI runtime objects (kernels+infrastructure)
+  Summary - "stm32f4" target
+  -------------------------------------------------
+               FLASH (ro)     %*   RAM (rw)      %
+  -------------------------------------------------
+  RT total          6,662   2.3%        864   6.8%
+  -------------------------------------------------
+  TOTAL           290,454            12,640
+  -------------------------------------------------
+  *  rt/total
+ Generated files (5)
+ ------------------------------------------------------------------------------------
+ network_data.h
+ network_data.c
+ network.h
+ network.c
+ network_details.h
+Creating txt report file network_generate_report.txt
+elapsed time (GENERATE): 3.243s

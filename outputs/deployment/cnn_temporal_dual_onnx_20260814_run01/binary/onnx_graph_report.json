@@ -1,0 +1,48 @@
+{
+  "all_graph_input_output_dimensions_static": true,
+  "dynamic_axes": false,
+  "inputs": [
+    {
+      "dtype": "float",
+      "name": "radar_input",
+      "shape": [
+        1,
+        60,
+        7
+      ]
+    }
+  ],
+  "ir_version": 8,
+  "node_count": 29,
+  "onnx_checker": "pass",
+  "onnx_path": "cnn_temporal_fold4_nonfall_fall.onnx",
+  "onnx_sha256": "10f8ed0d368aa95373be470a3ac17f7010569bb886689d977cb6ddcdc035b438",
+  "operator_counts": {
+    "Concat": 1,
+    "Constant": 9,
+    "Conv": 4,
+    "Gemm": 2,
+    "GlobalAveragePool": 1,
+    "MaxPool": 2,
+    "ReduceLogSumExp": 1,
+    "Relu": 5,
+    "Slice": 2,
+    "Squeeze": 1,
+    "Transpose": 1
+  },
+  "opset_imports": {
+    "ai.onnx": 17
+  },
+  "outputs": [
+    {
+      "dtype": "float",
+      "name": "binary_logits",
+      "shape": [
+        1,
+        2
+      ]
+    }
+  ],
+  "reduce_log_sum_exp_present": true,
+  "status": "pass"
+}

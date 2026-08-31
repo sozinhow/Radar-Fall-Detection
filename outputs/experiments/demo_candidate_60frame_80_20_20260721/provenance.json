@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-07-21T10:23:40.639479+08:00",
+  "project_root": "/Users/stella/Documents/HKUST_26_Fall/Project/radar",
+  "python_executable": "/Users/stella/miniconda3/bin/python",
+  "python_version": "3.13.2",
+  "package_versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.0",
+    "scikit_learn": "1.6.1",
+    "torch": "2.7.1",
+    "matplotlib": "3.10.3"
+  },
+  "source_dataset": "outputs/experiments/event_centered_clips_sgkf4_20260721/staging_clip_dataset_60.npz",
+  "source_dataset_sha256": "cd616803001025911fb0b4d2241dc161ab9fe2a28eaf09893a89f63a85d6cf9d",
+  "source_metadata": "outputs/experiments/event_centered_clips_sgkf4_20260721/staging_clip_metadata_60.csv",
+  "source_metadata_sha256": "a11eb833327cc2d30f1ab6cdb58d59d4faa462f4bc279744cdfa223be44d9508",
+  "accepted_runner": "outputs/experiments/event_centered_clips_sgkf4_20260721/run_event_centered_clips.py",
+  "accepted_runner_sha256": "555b71e84c218a59c48a70bdb63fbc50dafac023d6567ab0bddfbf388c628465",
+  "checkpoint_sha256": "5c9fd69a3e1de77ae46950d34322bc2df56043f93834ad5e43c66024c4baea4b",
+  "split_manifest_sha256": "97719b50286c79da8aa91f91550b088d4a3de46214b0e269ce85ab36ed2ae477",
+  "protected_paths_unchanged": true,
+  "protected_path_digests": {
+    "outputs/PROJECT_STATUS.md": "9e239abc68f83d8707f42b1780d7db0e7751c4f3e3ddc9d4b6efa50974ef8aa9",
+    "outputs/pipeline_operation.md": "da18295105f7d9cd4fba4e773019469ba22a3c80f028d41254db4c72f9cad31d",
+    "outputs/GUIDANCE.md": "67f81df42823fc631da7ed087aef3a7efd60932cf58056e5bfe355faefb18e0a",
+    "outputs/experiments/auto_event_aware_sgkf4_baseline": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/experiments/event_centered_clips_sgkf4_20260721": "1f68346c231a3560a72d281f92985cf4bf930d5d8bab136a972b67d0b7376173",
+    "outputs/experiments/event_centered_transformer_ablation_sgkf4_20260721": "2f60a00196042cfeb60e895338a9bb57e51412266f24fd45e2685443179e9bf4",
+    "data/metadata/auto_event_aware_v1_source_session_folds.csv": "04400ae7d303cd4f25c3a7bc6616126cd6f6679134d0aa6c63fb71aacdd753a6"
+  },
+  "retraining_existing_model": false,
+  "new_models_trained": 1,
+  "ensemble": false,
+  "threshold_selected_on_test": false,
+  "files_outside_output_created": false
+}

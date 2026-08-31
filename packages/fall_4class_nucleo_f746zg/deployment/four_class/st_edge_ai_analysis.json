@@ -1,0 +1,20 @@
+{
+  "available_binaries_in_path": {
+    "stedgeai": null,
+    "stedgeai-cli": null,
+    "stm32ai": null
+  },
+  "board_flashed": false,
+  "errors": "No stedgeai, stedgeai-cli, or stm32ai executable was found in PATH; compiler analysis was not run.",
+  "exact_command": null,
+  "firmware_modified": false,
+  "flash_bytes": null,
+  "latency_ms": null,
+  "model": "fold3_four_class",
+  "onnx_path": "cnn_temporal_fold3_four_class.onnx",
+  "output": "",
+  "ram_bytes": null,
+  "status": "not_available",
+  "supported_operators": null,
+  "tool_version": null
+}

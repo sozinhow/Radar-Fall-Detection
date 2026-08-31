@@ -1,0 +1,2 @@
+# Keep the module-local install path compatible with the repository-wide file.
+-r ../requirements.txt

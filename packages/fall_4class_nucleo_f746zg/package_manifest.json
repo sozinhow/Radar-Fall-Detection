@@ -1,0 +1,64 @@
+{
+  "package": "fall_4class_nucleo_f746zg",
+  "release": "four_class_deployment_candidate",
+  "generated_at": "2026-08-19",
+  "board": {
+    "name": "NUCLEO-F746ZG",
+    "mcu": "STM32F746ZGTx",
+    "core": "Cortex-M7"
+  },
+  "model": {
+    "name": "fold3_four_class",
+    "class_order": [
+      "walking",
+      "standing",
+      "sitting",
+      "fall"
+    ],
+    "input": {
+      "name": "radar_input",
+      "dtype": "float32",
+      "shape": [1, 60, 7],
+      "normalization": "deployment/four_class/normalization.json"
+    },
+    "output": {
+      "name": "logits",
+      "dtype": "float32",
+      "shape": [1, 4]
+    },
+    "checkpoint": {
+      "path": "training/fold3/cnn_temporal_event_centered.pt",
+      "sha256": "c5afe7b9556a4bf5bc55bdbb14c2b718b71a613b2620ac0601cc245ffdbf462f"
+    },
+    "onnx": {
+      "path": "deployment/four_class/cnn_temporal_fold3_four_class.onnx",
+      "sha256": "632ef26fc80294e20bc690714ead34bc1df57001e8cac2e4a8ce7275bed691ac"
+    }
+  },
+  "edge_ai_codegen": {
+    "tool": "ST Edge AI Core",
+    "version": "4.0.1-20581",
+    "optimization": "balanced",
+    "runtime": "NetworkRuntime1201_CM7_GCC.a",
+    "weights_bytes": 283792,
+    "activations_bytes": 11776,
+    "macc": 1075940,
+    "generated_files": "firmware/NUCLEO_F7_AI_four_class/AI/"
+  },
+  "firmware": {
+    "project": "firmware/NUCLEO_F7_AI_four_class/NUCLEO_F7_AI_four_class.ioc",
+    "source": "firmware/NUCLEO_F7_AI_four_class/",
+    "elf": "firmware/NUCLEO_F7_AI_four_class/Debug/NUCLEO_F7_AI_four_class.elf",
+    "elf_status": "pending_local_stm32_build",
+    "bin": "firmware/NUCLEO_F7_AI_four_class/Debug/NUCLEO_F7_AI_four_class.bin",
+    "bin_status": "pending_local_stm32_build",
+    "classification": "four_class_argmax_with_softmax_probabilities",
+    "version_1_policy_reused": false
+  },
+  "verification": {
+    "host_onnx_checker": "pass",
+    "host_onnxruntime_parity": "pass",
+    "board_build": "pending",
+    "board_flash_and_live_test": "pending"
+  }
+}

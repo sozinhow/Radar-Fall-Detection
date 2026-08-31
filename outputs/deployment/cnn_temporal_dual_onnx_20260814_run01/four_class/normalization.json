@@ -1,0 +1,36 @@
+{
+  "artifact_type": "checkpoint_bound_normalization",
+  "dtype": "float32",
+  "feature_order": [
+    "x",
+    "y",
+    "z",
+    "dop_idx",
+    "range_m",
+    "azimuth_deg",
+    "elevation_deg"
+  ],
+  "fit_scope": "outer-fold training sessions only",
+  "mean": [
+    0.5647932291030884,
+    2.3311216831207275,
+    -0.809962272644043,
+    0.1697469800710678,
+    2.6709227561950684,
+    12.879981994628906,
+    -19.63059425354004
+  ],
+  "onnx_expects": "already-normalized float32 [1,60,7] input",
+  "preprocessing_formula": "(raw_input - mean) / std",
+  "source_checkpoint_path": "../../../../fold_summary/fold_3/cnn_temporal_event_centered.pt",
+  "source_checkpoint_sha256": "c5afe7b9556a4bf5bc55bdbb14c2b718b71a613b2620ac0601cc245ffdbf462f",
+  "std": [
+    0.7782822251319885,
+    0.9837347269058228,
+    0.3324090540409088,
+    2.1183383464813232,
+    0.981528639793396,
+    18.481224060058594,
+    9.244574546813965
+  ]
+}

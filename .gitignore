@@ -1,0 +1,18 @@
+# macOS / Python caches
+**/.DS_Store
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+
+# Local validation output and collection sessions
+outputs/validation/
+STM32/n6570dk_blink/training_data/*
+
+# CubeIDE rebuild intermediates; keep checked-in ELF/map/list files
+**/Debug/**/*.o
+**/Debug/**/*.d
+**/Debug/**/*.su
+**/Debug/**/*.cyclo
+
+# Local editor metadata
+**/.settings/.snap

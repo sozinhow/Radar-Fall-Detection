@@ -1,0 +1,173 @@
+{
+  "adapter": {
+    "is_binary_adapter": false,
+    "mathematics": null,
+    "weights_unchanged": true
+  },
+  "checkpoint_contract": {
+    "clip_length_frames": 60,
+    "feature_order": [
+      "x",
+      "y",
+      "z",
+      "dop_idx",
+      "range_m",
+      "azimuth_deg",
+      "elevation_deg"
+    ],
+    "model_class": "CNNTemporal",
+    "n_features": 7,
+    "original_class_order": [
+      "walking",
+      "standing",
+      "sitting",
+      "fall"
+    ],
+    "outer_fold": 3,
+    "strict_state_dict_load": true,
+    "validated_before_export": true
+  },
+  "compiler": {
+    "available_binaries_in_path": {
+      "stedgeai": null,
+      "stedgeai-cli": null,
+      "stm32ai": null
+    },
+    "board_flashed": false,
+    "errors": "No stedgeai, stedgeai-cli, or stm32ai executable was found in PATH; compiler analysis was not run.",
+    "exact_command": null,
+    "firmware_modified": false,
+    "flash_bytes": null,
+    "latency_ms": null,
+    "model": "fold3_four_class",
+    "onnx_path": "cnn_temporal_fold3_four_class.onnx",
+    "output": "",
+    "ram_bytes": null,
+    "status": "not_available",
+    "supported_operators": null,
+    "tool_version": null
+  },
+  "environment": {
+    "onnx": "1.22.0",
+    "onnxruntime": "1.28.0",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.2",
+    "torch": "2.13.0"
+  },
+  "evaluation_evidence": {
+    "confusion_matrix": [
+      [
+        30,
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        38,
+        5,
+        0
+      ],
+      [
+        1,
+        3,
+        29,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        8
+      ]
+    ],
+    "expected_existing_test_evidence": {
+      "accuracy": 0.867768595,
+      "fall_f1": 0.8421052632,
+      "fall_precision": 1.0,
+      "fall_recall": 0.7272727273,
+      "macro_f1": 0.8638530615
+    },
+    "expected_values_match": true,
+    "fold": 3,
+    "source": "/Users/stella/Documents/HKUST_26_Fall/Project/radar/fold_summary/fold_3/metrics.json",
+    "test_metrics": {
+      "accuracy": 0.8677685950413223,
+      "fall_f1": 0.8421052631578947,
+      "fall_precision": 1.0,
+      "fall_recall": 0.7272727272727273,
+      "macro_f1": 0.8638530615075237
+    }
+  },
+  "model_description": "Fold 3 four-class CNNTemporal checkpoint export",
+  "normalization": {
+    "artifact_type": "checkpoint_bound_normalization",
+    "dtype": "float32",
+    "feature_order": [
+      "x",
+      "y",
+      "z",
+      "dop_idx",
+      "range_m",
+      "azimuth_deg",
+      "elevation_deg"
+    ],
+    "fit_scope": "outer-fold training sessions only",
+    "mean": [
+      0.5647932291030884,
+      2.3311216831207275,
+      -0.809962272644043,
+      0.1697469800710678,
+      2.6709227561950684,
+      12.879981994628906,
+      -19.63059425354004
+    ],
+    "onnx_expects": "already-normalized float32 [1,60,7] input",
+    "preprocessing_formula": "(raw_input - mean) / std",
+    "source_checkpoint_path": "../../../../fold_summary/fold_3/cnn_temporal_event_centered.pt",
+    "source_checkpoint_sha256": "c5afe7b9556a4bf5bc55bdbb14c2b718b71a613b2620ac0601cc245ffdbf462f",
+    "std": [
+      0.7782822251319885,
+      0.9837347269058228,
+      0.3324090540409088,
+      2.1183383464813232,
+      0.981528639793396,
+      18.481224060058594,
+      9.244574546813965
+    ]
+  },
+  "onnx_path": "cnn_temporal_fold3_four_class.onnx",
+  "onnx_sha256": "632ef26fc80294e20bc690714ead34bc1df57001e8cac2e4a8ce7275bed691ac",
+  "requested_onnx_contract": {
+    "class_order": [
+      "walking",
+      "standing",
+      "sitting",
+      "fall"
+    ],
+    "dtype": "float32",
+    "dynamic_axes": false,
+    "evaluation_mode": true,
+    "input_name": "radar_input",
+    "input_shape": [
+      1,
+      60,
+      7
+    ],
+    "opset": 17,
+    "output_name": "logits",
+    "output_shape": [
+      1,
+      4
+    ]
+  },
+  "source_checkpoint_path": "../../../../fold_summary/fold_3/cnn_temporal_event_centered.pt",
+  "source_checkpoint_sha256": "c5afe7b9556a4bf5bc55bdbb14c2b718b71a613b2620ac0601cc245ffdbf462f",
+  "status": "pass",
+  "validation": {
+    "onnx_checker": "pass",
+    "onnxruntime_parity": "pass",
+    "report": "onnxruntime_parity_report.json"
+  },
+  "version": "fold3_four_class"
+}

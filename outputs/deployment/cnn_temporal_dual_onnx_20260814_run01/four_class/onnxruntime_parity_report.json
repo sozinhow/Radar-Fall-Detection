@@ -1,0 +1,372 @@
+{
+  "atol": 1e-05,
+  "case_count": 8,
+  "cases": [
+    {
+      "case_id": "deterministic_random_fold3_0",
+      "ground_truth_class": null,
+      "ground_truth_index": null,
+      "max_abs_logit_error": 1.430511474609375e-06,
+      "max_abs_probability_error": 2.384185791015625e-07,
+      "max_relative_logit_error": 3.876625953580515e-07,
+      "max_relative_probability_error": 2.497970626791357e-06,
+      "onnx_logits": [
+        1.4674338102340698,
+        -3.0750772953033447,
+        -5.609806537628174,
+        3.108912467956543
+      ],
+      "onnx_predicted_class": "fall",
+      "onnx_predicted_index": 3,
+      "onnx_probabilities": [
+        0.16196197271347046,
+        0.00172435084823519,
+        0.0001367119257338345,
+        0.8361769318580627
+      ],
+      "pytorch_logits": [
+        1.4674333333969116,
+        -3.0750784873962402,
+        -5.609805107116699,
+        3.1089136600494385
+      ],
+      "pytorch_predicted_class": "fall",
+      "pytorch_predicted_index": 3,
+      "pytorch_probabilities": [
+        0.16196174919605255,
+        0.0017243465408682823,
+        0.00013671210035681725,
+        0.8361771702766418
+      ],
+      "source": "deterministic random normalized tensor"
+    },
+    {
+      "case_id": "deterministic_random_fold3_1",
+      "ground_truth_class": null,
+      "ground_truth_index": null,
+      "max_abs_logit_error": 1.9073486328125e-06,
+      "max_abs_probability_error": 9.778887033462524e-09,
+      "max_relative_logit_error": 7.734056453045923e-06,
+      "max_relative_probability_error": 2.8951503736607265e-06,
+      "onnx_logits": [
+        0.08573855459690094,
+        -4.63086462020874,
+        -6.191531181335449,
+        5.584829330444336
+      ],
+      "onnx_predicted_class": "fall",
+      "onnx_predicted_index": 3,
+      "onnx_probabilities": [
+        0.004073645919561386,
+        3.644083335530013e-05,
+        7.652433851035312e-06,
+        0.9958822727203369
+      ],
+      "pytorch_logits": [
+        0.08573789149522781,
+        -4.630866527557373,
+        -6.191530704498291,
+        5.5848307609558105
+      ],
+      "pytorch_predicted_class": "fall",
+      "pytorch_predicted_index": 3,
+      "pytorch_probabilities": [
+        0.004073636140674353,
+        3.644072785391472e-05,
+        7.652426575077698e-06,
+        0.9958822727203369
+      ],
+      "source": "deterministic random normalized tensor"
+    },
+    {
+      "case_id": "deterministic_random_fold3_2",
+      "ground_truth_class": null,
+      "ground_truth_index": null,
+      "max_abs_logit_error": 2.2649765014648438e-06,
+      "max_abs_probability_error": 7.82310962677002e-08,
+      "max_relative_logit_error": 3.598117473302409e-06,
+      "max_relative_probability_error": 2.7413168481871253e-06,
+      "onnx_logits": [
+        0.6294870376586914,
+        -4.110159397125244,
+        -4.912765979766846,
+        4.156691551208496
+      ],
+      "onnx_predicted_class": "fall",
+      "onnx_predicted_index": 3,
+      "onnx_probabilities": [
+        0.028537701815366745,
+        0.0002494689542800188,
+        0.00011180181900272146,
+        0.9711010456085205
+      ],
+      "pytorch_logits": [
+        0.6294893026351929,
+        -4.110160827636719,
+        -4.912766456604004,
+        4.156691074371338
+      ],
+      "pytorch_predicted_class": "fall",
+      "pytorch_predicted_index": 3,
+      "pytorch_probabilities": [
+        0.028537780046463013,
+        0.00024946892517618835,
+        0.00011180180445080623,
+        0.9711009860038757
+      ],
+      "source": "deterministic random normalized tensor"
+    },
+    {
+      "case_id": "deterministic_random_fold3_3",
+      "ground_truth_class": null,
+      "ground_truth_index": null,
+      "max_abs_logit_error": 9.5367431640625e-07,
+      "max_abs_probability_error": 9.778887033462524e-09,
+      "max_relative_logit_error": 5.526072072825627e-06,
+      "max_relative_probability_error": 1.9551853256416507e-06,
+      "onnx_logits": [
+        0.12673711776733398,
+        -4.094363212585449,
+        -6.357002258300781,
+        5.125986576080322
+      ],
+      "onnx_predicted_class": "fall",
+      "onnx_predicted_index": 3,
+      "onnx_probabilities": [
+        0.006697115488350391,
+        9.833022340899333e-05,
+        1.0233772627543658e-05,
+        0.9931943416595459
+      ],
+      "pytorch_logits": [
+        0.12673641741275787,
+        -4.094364166259766,
+        -6.357002258300781,
+        5.125987529754639
+      ],
+      "pytorch_predicted_class": "fall",
+      "pytorch_predicted_index": 3,
+      "pytorch_probabilities": [
+        0.006697105709463358,
+        9.833003423409536e-05,
+        1.0233752618660219e-05,
+        0.9931943416595459
+      ],
+      "source": "deterministic random normalized tensor"
+    },
+    {
+      "case_id": "real_fold3_walking_60_walking_20260715_132151_20hz",
+      "complete_mask": true,
+      "dataset": "outputs/experiments/event_centered_clips_sgkf4_20260721/staging_clip_dataset_60.npz",
+      "dataset_index": 353,
+      "ground_truth_class": "walking",
+      "ground_truth_index": 0,
+      "max_abs_logit_error": 3.5762786865234375e-07,
+      "max_abs_probability_error": 5.587935447692871e-09,
+      "max_relative_logit_error": 1.3070587101537967e-06,
+      "max_relative_probability_error": 5.04578508753184e-07,
+      "onnx_logits": [
+        4.215856075286865,
+        -0.2736130654811859,
+        -2.186795711517334,
+        -2.8489267826080322
+      ],
+      "onnx_predicted_class": "walking",
+      "onnx_predicted_index": 0,
+      "onnx_probabilities": [
+        0.9864476919174194,
+        0.011074456386268139,
+        0.0016346985939890146,
+        0.0008430973393842578
+      ],
+      "outer_fold": 3,
+      "pytorch_logits": [
+        4.215856075286865,
+        -0.27361270785331726,
+        -2.186795949935913,
+        -2.848926544189453
+      ],
+      "pytorch_predicted_class": "walking",
+      "pytorch_predicted_index": 0,
+      "pytorch_probabilities": [
+        0.9864476919174194,
+        0.011074461974203587,
+        0.0016346985939890146,
+        0.0008430977468378842
+      ],
+      "source": "real held-out staging example",
+      "source_session_id": "walking_20260715_132151_20hz"
+    },
+    {
+      "case_id": "real_fold3_standing_60_standing_20260714_140445_20hz",
+      "complete_mask": true,
+      "dataset": "outputs/experiments/event_centered_clips_sgkf4_20260721/staging_clip_dataset_60.npz",
+      "dataset_index": 178,
+      "ground_truth_class": "standing",
+      "ground_truth_index": 1,
+      "max_abs_logit_error": 2.384185791015625e-06,
+      "max_abs_probability_error": 2.980232238769531e-07,
+      "max_relative_logit_error": 6.730202812832431e-07,
+      "max_relative_probability_error": 3.4970043998328038e-06,
+      "onnx_logits": [
+        -2.4223766326904297,
+        3.5425145626068115,
+        1.588666558265686,
+        -2.0045723915100098
+      ],
+      "onnx_predicted_class": "standing",
+      "onnx_predicted_index": 1,
+      "onnx_probabilities": [
+        0.0022359672002494335,
+        0.8709331750869751,
+        0.12343531847000122,
+        0.003395593259483576
+      ],
+      "outer_fold": 3,
+      "pytorch_logits": [
+        -2.4223761558532715,
+        3.5425169467926025,
+        1.5886669158935547,
+        -2.004573345184326
+      ],
+      "pytorch_predicted_class": "standing",
+      "pytorch_predicted_index": 1,
+      "pytorch_probabilities": [
+        0.002235963474959135,
+        0.870933473110199,
+        0.12343509495258331,
+        0.0033955813851207495
+      ],
+      "source": "real held-out staging example",
+      "source_session_id": "standing_20260714_140445_20hz"
+    },
+    {
+      "case_id": "real_fold3_sitting_60_sitting_20260714_132742_20hz",
+      "complete_mask": true,
+      "dataset": "outputs/experiments/event_centered_clips_sgkf4_20260721/staging_clip_dataset_60.npz",
+      "dataset_index": 44,
+      "ground_truth_class": "sitting",
+      "ground_truth_index": 2,
+      "max_abs_logit_error": 9.5367431640625e-07,
+      "max_abs_probability_error": 9.313225746154785e-10,
+      "max_relative_logit_error": 9.587428166923928e-07,
+      "max_relative_probability_error": 1.992639909076388e-06,
+      "onnx_logits": [
+        -0.09973372519016266,
+        0.4351866841316223,
+        6.79298210144043,
+        -8.2741117477417
+      ],
+      "onnx_predicted_class": "sitting",
+      "onnx_predicted_index": 2,
+      "onnx_probabilities": [
+        0.0010123704560101032,
+        0.0017284329514950514,
+        0.9972589015960693,
+        2.852674469977501e-07
+      ],
+      "outer_fold": 3,
+      "pytorch_logits": [
+        -0.09973365068435669,
+        0.43518710136413574,
+        6.792983055114746,
+        -8.274112701416016
+      ],
+      "pytorch_predicted_class": "sitting",
+      "pytorch_predicted_index": 2,
+      "pytorch_probabilities": [
+        0.0010123695246875286,
+        0.0017284321365877986,
+        0.9972589015960693,
+        2.852668785635615e-07
+      ],
+      "source": "real held-out staging example",
+      "source_session_id": "sitting_20260714_132742_20hz"
+    },
+    {
+      "case_id": "real_fold3_fall_60_falling_20260715_142031_20hz",
+      "complete_mask": true,
+      "dataset": "outputs/experiments/event_centered_clips_sgkf4_20260721/staging_clip_dataset_60.npz",
+      "dataset_index": 23,
+      "ground_truth_class": "fall",
+      "ground_truth_index": 3,
+      "max_abs_logit_error": 1.5497207641601562e-06,
+      "max_abs_probability_error": 5.364418029785156e-07,
+      "max_relative_logit_error": 1.077568640539539e-06,
+      "max_relative_probability_error": 1.5170235201367177e-06,
+      "onnx_logits": [
+        0.7190814018249512,
+        1.7003556489944458,
+        -5.153594493865967,
+        0.1591411828994751
+      ],
+      "onnx_predicted_class": "standing",
+      "onnx_predicted_index": 1,
+      "onnx_probabilities": [
+        0.23574276268482208,
+        0.6289271712303162,
+        0.0006636936450377107,
+        0.13466644287109375
+      ],
+      "outer_fold": 3,
+      "pytorch_logits": [
+        0.7190821766853333,
+        1.7003540992736816,
+        -5.153594970703125,
+        0.15914127230644226
+      ],
+      "pytorch_predicted_class": "standing",
+      "pytorch_predicted_index": 1,
+      "pytorch_probabilities": [
+        0.23574312031269073,
+        0.6289266347885132,
+        0.0006636937614530325,
+        0.1346665620803833
+      ],
+      "source": "real held-out staging example",
+      "source_session_id": "falling_20260715_142031_20hz"
+    }
+  ],
+  "input": {
+    "name": "radar_input",
+    "shape": [
+      1,
+      60,
+      7
+    ],
+    "type": "tensor(float)"
+  },
+  "logits_allclose": true,
+  "max_abs_logit_error": 2.384185791015625e-06,
+  "max_abs_probability_error": 5.364418029785156e-07,
+  "max_relative_logit_error": 7.734056453045923e-06,
+  "max_relative_probability_error": 3.4970043998328038e-06,
+  "onnx_output_shape": [
+    8,
+    4
+  ],
+  "onnx_sha256": "632ef26fc80294e20bc690714ead34bc1df57001e8cac2e4a8ce7275bed691ac",
+  "onnxruntime_version": "1.28.0",
+  "output": {
+    "name": "logits",
+    "shape": [
+      1,
+      4
+    ],
+    "type": "tensor(float)"
+  },
+  "predicted_classes_match": true,
+  "probabilities_allclose": true,
+  "provider": "CPUExecutionProvider",
+  "pytorch_input_shape": [
+    8,
+    60,
+    7
+  ],
+  "pytorch_output_shape": [
+    8,
+    4
+  ],
+  "rtol": 1e-05,
+  "status": "pass"
+}

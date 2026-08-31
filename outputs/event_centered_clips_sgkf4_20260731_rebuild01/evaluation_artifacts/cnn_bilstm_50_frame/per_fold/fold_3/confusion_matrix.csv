@@ -1,0 +1,5 @@
+true_class,walking,standing,sitting,fall
+walking,17,4,4,7
+standing,2,39,2,0
+sitting,4,10,18,1
+fall,1,2,0,17

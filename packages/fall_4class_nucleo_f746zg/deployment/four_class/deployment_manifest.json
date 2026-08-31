@@ -1,0 +1,105 @@
+{
+  "class_order": [
+    "walking",
+    "standing",
+    "sitting",
+    "fall"
+  ],
+  "clip_length_frames": 60,
+  "compiler": {
+    "flash_bytes": null,
+    "latency_ms": null,
+    "ram_bytes": null,
+    "report": "st_edge_ai_analysis.json",
+    "status": "not_available"
+  },
+  "deployment_id": "cnn_temporal_dual_onnx_20260814_run01",
+  "dtype": "float32",
+  "dynamic_axes": false,
+  "evaluation_mode": true,
+  "feature_order": [
+    "x",
+    "y",
+    "z",
+    "dop_idx",
+    "range_m",
+    "azimuth_deg",
+    "elevation_deg"
+  ],
+  "input": {
+    "dtype": "float32",
+    "name": "radar_input",
+    "shape": [
+      1,
+      60,
+      7
+    ]
+  },
+  "model_class": "CNNTemporal",
+  "model_description": "Fold 3 four-class CNNTemporal checkpoint export",
+  "normalization": {
+    "mean": [
+      0.5647932291030884,
+      2.3311216831207275,
+      -0.809962272644043,
+      0.1697469800710678,
+      2.6709227561950684,
+      12.879981994628906,
+      -19.63059425354004
+    ],
+    "path": "normalization.json",
+    "sha256": "41570f54dbd912d9268b862266b7de476e531c7cddccba2bad164d1e44a0da6f",
+    "std": [
+      0.7782822251319885,
+      0.9837347269058228,
+      0.3324090540409088,
+      2.1183383464813232,
+      0.981528639793396,
+      18.481224060058594,
+      9.244574546813965
+    ]
+  },
+  "onnx": {
+    "format": "onnx",
+    "opset": 17,
+    "path": "cnn_temporal_fold3_four_class.onnx",
+    "sha256": "632ef26fc80294e20bc690714ead34bc1df57001e8cac2e4a8ce7275bed691ac"
+  },
+  "onnx_checker": "pass",
+  "opset": 17,
+  "output": {
+    "dtype": "float32",
+    "name": "logits",
+    "shape": [
+      1,
+      4
+    ]
+  },
+  "parity": {
+    "atol": 1e-05,
+    "max_abs_logit_error": 2.384185791015625e-06,
+    "max_abs_probability_error": 5.364418029785156e-07,
+    "max_relative_logit_error": 7.734056453045923e-06,
+    "max_relative_probability_error": 3.4970043998328038e-06,
+    "predicted_classes_match": true,
+    "report": "onnxruntime_parity_report.json",
+    "rtol": 1e-05,
+    "status": "pass"
+  },
+  "reports": {
+    "deployment_manifest": "deployment_manifest.json",
+    "export_report": "export_report.json",
+    "normalization": "normalization.json",
+    "onnx_graph_report": "onnx_graph_report.json",
+    "onnxruntime_parity_report": "onnxruntime_parity_report.json",
+    "st_edge_ai_analysis": "st_edge_ai_analysis.json"
+  },
+  "source_checkpoint": {
+    "model_class": "CNNTemporal",
+    "outer_fold": 3,
+    "path": "../../training/fold3/cnn_temporal_event_centered.pt",
+    "sha256": "c5afe7b9556a4bf5bc55bdbb14c2b718b71a613b2620ac0601cc245ffdbf462f"
+  },
+  "status": "pass",
+  "version": "fold3_four_class"
+}

@@ -1,0 +1,55 @@
+{
+  "decision": "PROMISING",
+  "dataset_source": "data/final_dataset_auto_event_exclude_risky_fall_20260731_rebuild01/radar_dataset.npz",
+  "dataset_sha256": "f7956b4beec90fee0f8e7c04173e01d98ea8ee862a62b6e4115ebb3e72368ce2",
+  "manifest": "data/metadata/auto_event_exclude_risky_fall_20260731_rebuild01_source_session_folds.csv",
+  "manifest_sha256": "812e55172fc18275ee813681987e95d50a21fa6681eb805c499dfe342f616c92",
+  "annotations": "data/metadata/auto_event_annotations_20260731_rebuild01.csv",
+  "annotations_sha256": "270026144a652903d0c0e607bada10c23ea804652bb545199c835f8e03f4e79d",
+  "source_sessions": 515,
+  "clip_lengths": [
+    50,
+    60
+  ],
+  "sampling_rate_hz": 20.0,
+  "stride_frames": 15,
+  "post_impact_frames": {
+    "50": 15,
+    "60": 20
+  },
+  "seed": 42,
+  "config": {
+    "epochs": 80,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 12,
+    "seed": 42,
+    "folds": 4,
+    "val_folds": 6,
+    "feature_mode": "augmented",
+    "dropout_input": 0.25,
+    "dropout_hidden": 0.2
+  },
+  "base_features": [
+    "x",
+    "y",
+    "z",
+    "dop_idx",
+    "range_m",
+    "azimuth_deg",
+    "elevation_deg"
+  ],
+  "synthetic_augmentation": false,
+  "height_or_session_features": false,
+  "nonfall_clip_policy": "legacy_hash",
+  "nonfall_clip_policy_definition": "historical SHA-256 seed-42 stride-15 selection",
+  "wrapper_requested_clip_lengths": [
+    50,
+    60
+  ],
+  "wrapper_post_impact_frames": {
+    "50": 15,
+    "60": 20
+  }
+}

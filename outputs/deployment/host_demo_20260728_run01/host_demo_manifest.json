@@ -1,0 +1,23 @@
+{
+  "deployment_id": "host_demo_20260728_run01",
+  "purpose": "diagnostic_host_demo",
+  "status": "in_progress",
+  "alert_enabled": false,
+  "checkpoint": {
+    "path": "../../experiments/demo_candidate_60frame_80_20_20260721/model/cnn_bilstm_60frame_demo_candidate.pt",
+    "sha256": "5c9fd69a3e1de77ae46950d34322bc2df56043f93834ad5e43c66024c4baea4b"
+  },
+  "normalization": {
+    "path": "../../experiments/demo_candidate_60frame_80_20_20260721/normalization_stats.json",
+    "sha256": "0b66e0eae7aab2ff0a268af856504022980ee8d73b00cf85ef67461b62ababd3"
+  },
+  "class_names": ["walking", "standing", "sitting", "fall"],
+  "base_feature_names": ["x", "y", "z", "dop_idx", "range_m", "azimuth_deg", "elevation_deg"],
+  "derived_feature_names": ["xyz_delta_mag", "x_roll_std", "y_roll_std", "z_roll_std", "range_roll_std", "range_centered"],
+  "input_layout": [1, 60, 13],
+  "input_dtype": "float32",
+  "processed_rate_hz": 20,
+  "clip_length_frames": 60,
+  "stride_frames": 15,
+  "reset_policy": "clear on missing scheduled record, duplicate frame ID, non-finite value, non-monotonic timestamp, or timestamp discontinuity"
+}
